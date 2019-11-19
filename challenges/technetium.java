@@ -7,6 +7,9 @@ import java.util.*;
  * performance: 33%
  * problem: 
  * - performance test: running time 9.912 sec, expected 9.328 sec
+ *
+ * Find a maximal value path in a matrix, 
+ * starting in the top-left corner and ending in the bottom-right corner.
  */
 class Technetium{
 
