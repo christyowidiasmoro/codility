@@ -1,5 +1,8 @@
 #
 # MaxPathFromTheLeftTopCorner score: 100% correctness: 100% performance: 100%
+# 
+# Find a maximal value path in a matrix, 
+# starting in the top-left corner and ending in the bottom-right corner.
 #
 
 def solution(A):
