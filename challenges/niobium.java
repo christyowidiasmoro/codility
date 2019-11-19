@@ -9,8 +9,7 @@ import 	java.lang.Math;
  * problem: 
  * 	- performance test: running time around 0.7 sec, expected around 0.5 sec,  
  */
-class Niobium
- {
+class Niobium {
 	public int solution(int[][] A) {
 		int N = A.length;
 		int M = A[0].length;
@@ -29,9 +28,9 @@ class Niobium
 		}
 
 		/**
-		 * 1023				(10 digit binary = 	4 digit integer >> 6)
-		 * 1048575			(20 				7 				>> 13)
-		 * 1099511627775	(40 				13				>> 17)
+		 * 1023			(10 digit binary = 	4 digit integer >> 6)
+		 * 1048575		(20			7 		>> 13)
+		 * 1099511627775	(40			13		>> 17)
 		 */
 		int threshold = 20;
 		String format = "%08d"; // 10 digit max 1023
@@ -80,38 +79,31 @@ class Niobium
 			}
 			maxValue = Math.max(maxValue, map.get(s0));
 		}
-
 		return maxValue;
-    }
+    	}
 	
-    public static void test(int[][] A) {
-        Niobium sol = new Niobium();
-
-        long time = 0;
-
-        time = System.currentTimeMillis();
-
-        System.out.println(sol.solution(A));
-
-        System.out.println("time: " + (System.currentTimeMillis() - time) / 1000000.0);
-    }
-
-    public static void main(String[] args) {     
-		
+	public static void test(int[][] A) {
+		Niobium sol = new Niobium();
+		long time = 0;
+		time = System.currentTimeMillis();
+		System.out.println(sol.solution(A));
+		System.out.println("time: " + (System.currentTimeMillis() - time) / 1000000.0);
+	}
+	
+	public static void main(String[] args) {     
 		int[][] A = { { 0, 0, 0, 0 }, { 0, 1, 0, 0 }, {1, 0, 1, 1} };
 		test(A);
-
+		
 		int[][] B = { { 0, 1, 0, 1 }, { 1, 0, 1, 0 }, {0, 1, 0, 1}, {1, 0, 1, 0} };
 		test(B);		
 		
-        Random rng = new Random();
-        int[][] R = new int[1000][1000];
-        for(int i = 0; i < R.length; i++) {
-            for(int j = 0; j < R[i].length; j++) {
-                R[i][j] = rng.nextInt(2);
-            }   
-        }
+		Random rng = new Random();
+		int[][] R = new int[1000][1000];
+		for(int i = 0; i < R.length; i++) {
+			for(int j = 0; j < R[i].length; j++) {
+				R[i][j] = rng.nextInt(2);
+			}   
+		}
 		test(R);
-		
 	}
 }
