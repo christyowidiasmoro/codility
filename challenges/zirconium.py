@@ -1,5 +1,7 @@
 #
 # DreamTeam. Score: 100%, Correctness: 100%, Performance: 100%.
+# 
+# Divide developers into two teams to maximize their total contribution.
 #
 
 def solution(A, B, F):
