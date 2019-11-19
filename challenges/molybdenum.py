@@ -1,5 +1,8 @@
 #
 # LeaderSliceInc. Score: 100%, Correctness: 100%, Performance: 100%.
+# 
+# Given an array, find all its elements that can become a leader, 
+# after increasing by 1 all of the numbers in some segment of a given length.
 #
 
 def solution(K, M, A):
